@@ -25,7 +25,7 @@ __location__ = os.path.join(os.getcwd(), os.path.dirname(
 MAIN_PACKAGE = "mymeal"
 DESCRIPTION = "None"
 LICENSE = "new BSD"
-URL = "https://github.com/ziggi0703/mymeal.git"
+URL = ""
 AUTHOR = "Michael Ziegler"
 EMAIL = "ziggi_0@web.de"
 
