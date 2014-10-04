@@ -24,7 +24,7 @@ __location__ = os.path.join(os.getcwd(), os.path.dirname(
 # Change these settings according to your needs
 MAIN_PACKAGE = "mymeal"
 DESCRIPTION = "None"
-LICENSE = ""
+LICENSE = "MIT"
 URL = ""
 AUTHOR = "Michael Ziegler"
 EMAIL = "ziggi_0@web.de"
