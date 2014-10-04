@@ -5,7 +5,9 @@ from django.db import models
 
 class Restaurant(models.Model):
     name = models.CharField(max_length=100)
-    link_to_menu = models.CharField(max_length=200, blank=True)
+    link_to_menu = models.URLField(blank=True)
+    food_type = models.CharField(max_length=100, blank=True, null=True)
+    price = models.IntegerField(null=True)
 
     def __unicode__(self):
         return unicode(self.name)
