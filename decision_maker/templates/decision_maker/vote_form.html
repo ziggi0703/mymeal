@@ -1,0 +1,13 @@
+<h1>MyMeal voting {{ date }}</h1>
+
+ <form action="{% url 'decision_maker:vote' date %}" method="post">
+    {% csrf_token %}
+    {% for restaurant in restaurants %}
+        {{ restaurant.name }}: <input type="radio"
+                                      name="restaurant"
+                                      id="restaurant{{ forloop.counter }}"
+                                      value="{{ restaurant.id }}" /><br />
+    {% endfor %}
+
+    <input type="submit" value="Vote" />
+ </form>
