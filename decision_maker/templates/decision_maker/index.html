@@ -1,7 +1,7 @@
 {% if restaurants %}
         <ul>
             {% for restaurant in restaurants %}
-                <li><a href="/decision_maker/{{ restaurant.id }}/"{{ restaurant.name }}</a></li>
+                <li><a href="{% url 'decision_maker:detail' restaurant.id %}">{{ restaurant.name }}</a></li>
             {% endfor %}
         </ul>
 {% else %}

@@ -1,0 +1,9 @@
+<h1>{{ restaurant }}</h1>
+<ul>
+    <li>Type of food: {{ restaurant.food_type }}</li>
+    {% if restaurant.link_to_menu %}
+        <li><a href={{restaurant.link_to_menu}}>Menu</a></li>
+    {% else %}
+        <li>No link to menu!</li>
+    {% endif %}
+</ul>
