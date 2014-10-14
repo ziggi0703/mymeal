@@ -1,3 +1,7 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'decision_maker/style.css' %}" />
+
 <h1>{{ restaurant }}</h1>
 <ul>
     <li>Type of food: {{ restaurant.food_type }}</li>
