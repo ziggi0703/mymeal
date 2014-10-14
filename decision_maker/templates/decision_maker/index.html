@@ -1,9 +1,21 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'decision_maker/style.css' %}" />
+
+<h1>Restaurants</h1>
+
 {% if restaurants %}
-        <ul>
-            {% for restaurant in restaurants %}
-                <li><a href="{% url 'decision_maker:detail' restaurant.id %}">{{ restaurant.name }}</a></li>
-            {% endfor %}
-        </ul>
+    {% for restaurant in restaurants %}
+        <div class="restaurant">
+            <p class="name">{{ restaurant.name }}</p>
+            <ul>
+                <li>Food type: {{ restaurant.food_type }}</li>
+                {% if restaurant.link_to_menu %}
+                <li>See <a href={{ restaurant.link_to_menu }}>menu</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    {% endfor %}
 {% else %}
         <p>No restaurants available.</p>
 {% endif %}
